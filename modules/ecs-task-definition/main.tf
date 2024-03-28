@@ -21,7 +21,7 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
   network_mode             = "bridge"
   cpu                      = 256
   memory                   = 512
-  requires_compatibilities = ["EC2"]
+  requires_compatibilities = ["FARGATE"]
   task_role_arn            = "arn:aws:iam::123456789012:role/ecsTaskRole"
   
   volume {
